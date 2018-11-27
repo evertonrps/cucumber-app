@@ -1,0 +1,137 @@
+[
+  {
+    "description": "  As a user of the page\n  I should get a customized greet",
+    "keyword": "Feature",
+    "name": "Greet the user",
+    "line": 1,
+    "id": "greet-the-user",
+    "tags": [],
+    "uri": "e2e\\features\\app.feature",
+    "elements": [
+      {
+        "id": "greet-the-user;get-a-customized-greet",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Get a customized greet",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "I am on the Home page",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I write Tom in the name input",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click on greet button",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "the greeting should be \"Welcome Tom!!\"",
+            "result": {
+              "status": "undefined"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "   This is an example feature",
+    "keyword": "Feature",
+    "name": "Example Feature",
+    "line": 1,
+    "id": "example-feature",
+    "tags": [],
+    "uri": "e2e\\features\\my_feature.feature",
+    "elements": [
+      {
+        "id": "example-feature;adding-two-numbers",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Adding two numbers",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I enter '2' and '8'",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I receive the result '10'",
+            "result": {
+              "status": "undefined"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "    Exemplo de utilizacao",
+    "keyword": "Funcionalidade",
+    "name": "Vamos Testar",
+    "line": 2,
+    "id": "vamos-testar",
+    "tags": [],
+    "uri": "e2e\\features\\portugues.feature",
+    "elements": [
+      {
+        "id": "vamos-testar;testando-o-idioma-português",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Testando o idioma português",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Dado ",
+            "line": 5,
+            "name": "que navego ate o google",
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "E ",
+            "line": 6,
+            "name": "verifico se estou na pagina correta",
+            "result": {
+              "status": "undefined"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

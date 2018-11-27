@@ -1,6 +1,8 @@
 
 import { binding, given, then } from "cucumber-tsflow";
 import { browser } from "protractor";
+let chai = require('chai').use(require('chai-as-promised'));
+let expect = chai.expect;
 
 @binding()
 class PortuguesSteps{
@@ -17,8 +19,11 @@ class PortuguesSteps{
     /**
      * VerificoSeEstouNaPaginaCorreta
      */
-    public VerificoSeEstouNaPaginaCorreta():void {
-        console.log("verifico se estou no google")
+    public VerificoSeEstouNaPaginaCorreta():void {         
+       //let url = await browser.getCurrentUrl().then((resultado)=> {console.log("resultado: "+resultado);});
+
+      // expect(url).to.equal("www.google.com.br");
+      return expect(browser.getCurrentUrl()).to.eventually.equal("www.google.com.b1r");
     }
 }
 
