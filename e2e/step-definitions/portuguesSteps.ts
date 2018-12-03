@@ -7,12 +7,10 @@ let expect = chai.expect;
 
 @binding()
 class PortuguesSteps{
-    @given(/que navego ate o google/)
-    /**
-     * NavegaAteSite
-     */
+    
+    @given(/que navego ate a pagina de carros/)
     public NavegaAteSite():void {
-        browser.get('http://localhost:4200/');
+         browser.get('http://localhost:4200/');
        // console.log("navego ate o google")
     }
 
@@ -24,7 +22,7 @@ class PortuguesSteps{
        //let url = await browser.getCurrentUrl().then((resultado)=> {console.log("resultado: "+resultado);});
 
        //let searchbox : WebElement = null;
-       return expect(browser.driver.findElement(by.xpath("/html/body/app-root/div[2]/label")).getText()).to.eventually.equal("What's your name?:");
+       return expect(browser.driver.findElement(by.xpath("/html/body/app-root/app-main/div/main/app-home/a[1]")).getText()).to.eventually.equal("Carros");
        //searchbox= (element)browser.driver.executeAsyncScript("return document.evaluate('/html/body/app-root/div[2]/label', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;", searchbox);
        
       // expect(url).to.equal("www.google.com.br");
