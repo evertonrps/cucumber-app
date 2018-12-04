@@ -14,7 +14,7 @@ class GreetingSteps {
 
     @when(/I click on link greeting/)
     public clickOnLink(): void {
-        browser.driver.findElement(by.xpath("/html/body/app-root/app-main/div/main/app-home/a[1]")).click();
+        browser.driver.findElement(by.xpath("/html/body/app-root/app-main/div/main/app-home/a[2]")).click();
     };
 
     @when(/I write Tom in the name input/)
@@ -30,3 +30,4 @@ class GreetingSteps {
     }
 }
 
+export default GreetingSteps;

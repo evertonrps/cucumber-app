@@ -9,6 +9,7 @@ exports.config = {
   capabilities: {
     'browserName': 'chrome'
   },
+  restartBrowserBetweenTests: true,
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
   framework: 'custom',
@@ -22,7 +23,7 @@ exports.config = {
     compiler: [ 'ts:ts-node']
   },
   onPrepare: function() {
-    browser.manage().window().maximize(); // maximize the browser before executing the feature files
+    browser.manage().window();//.maximize(); // maximize the browser before executing the feature files
   },
   beforeLaunch: () => {
     require('ts-node').register({
