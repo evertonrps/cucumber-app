@@ -1,6 +1,9 @@
 import { binding, given, then, when } from "cucumber-tsflow";
 import { browser, WebElement, by } from "protractor";
 import { element } from "@angular/core/src/render3/instructions";
+import { HomeComponent } from "src/app/home/home.component";
+import * as HomeX from '../pages/helper.page';
+
 let chai = require('chai').use(require('chai-as-promised'));
 let expect = chai.expect;
 
@@ -9,7 +12,9 @@ class GreetingSteps {
 
     @given(/I am on the Home page/)
     public name(): void {
-        browser.get('http://localhost:4200/');
+        HomeX.homePageObject().get();
+
+        //browser.get('http://localhost:4200/');
     };
 
     @when(/I click on link greeting/)

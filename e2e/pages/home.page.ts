@@ -3,7 +3,8 @@ import { browser, by, element, promise } from "protractor";
 export class HomePageObject {
 
   get(): promise.Promise<void> {
-    return browser.get('');
+    //return browser.get('');
+    return browser.get('http://localhost:4200/');
   }
 
   setInput(inputName: string, value: string): promise.Promise<void> {

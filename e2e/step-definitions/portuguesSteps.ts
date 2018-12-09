@@ -2,6 +2,7 @@
 import { binding, given, then, before, after } from "cucumber-tsflow";
 import { browser, WebElement, by } from "protractor";
 import { element } from "@angular/core/src/render3/instructions";
+import * as HomeX from '../pages/helper.page';
 let chai = require('chai').use(require('chai-as-promised'));
 let expect = chai.expect;
 
@@ -15,7 +16,8 @@ class PortuguesSteps{
 
     @given(/que navego ate a pagina de carros/)
     public NavegaAteSite():void {
-         browser.get('http://localhost:4200/');
+      HomeX.homePageObject().get();
+         //browser.get('http://localhost:4200/');
          browser.waitForAngular();
          browser.driver.findElement(by.xpath("/html/body/app-root/app-main/div/main/app-home/a[1]")).click();
        // console.log("navego ate o google")
