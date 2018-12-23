@@ -18,10 +18,18 @@ exports.config = {
     require: ['./step-definitions/*.ts'],
     tags: [],
     strict: true,
-    format: ["progress"],
+    format: ["progress","json:.tmp/results.json"],
     dryRun: false,
     compiler: [ 'ts:ts-node']
   },
+  plugins: [{
+    package: 'protractor-multiple-cucumber-html-reporter-plugin',
+    options:{
+        // read the options part
+        automaticallyGenerateReport: true,
+        removeExistingJsonReportFile: true
+    }
+}],
   onPrepare: function() {
     browser.manage().window();//.maximize(); // maximize the browser before executing the feature files
   },
